@@ -7,13 +7,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Homepage"),
-        backgroundColor: const Color.fromARGB(255, 3, 131, 243),
+        title: Text("Prantha's Homepage"),
+        backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
-        // leading: Icon(Icons.home),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.settings),
+          ),
         ],
       ),
 
@@ -22,42 +27,58 @@ class HomePage extends StatelessWidget {
           children: [
             UserAccountsDrawerHeader(
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 82, 111, 170),
+                color: Colors.indigo,
               ),
-              accountName: Text("Name"),
-              accountEmail: Text("Email"),
-              currentAccountPicture: Icon(Icons.person_2),
+              accountName: Text("Prantha"),
+              accountEmail: Text("Welcome to my Homepage"),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.person,
+                  size: 35,
+                  color: Colors.indigo,
+                ),
+              ),
             ),
 
             ListTile(
-              trailing: Icon(Icons.home),
-              hoverColor: const Color.fromARGB(255, 5, 129, 238),
+              leading: Icon(Icons.home, color: Colors.indigo),
               title: Text("Homepage"),
+              hoverColor: Colors.indigo.shade100,
               onTap: () {},
             ),
+
             Divider(),
+
             ListTile(
-              trailing: Icon(Icons.call),
-              hoverColor: const Color.fromARGB(255, 157, 170, 82),
-              title: Text("Contact Me"),
+              leading: Icon(Icons.call, color: Colors.indigo),
+              title: Text("Contact"),
+              hoverColor: Colors.indigo.shade100,
               onTap: () {},
             ),
+
             Divider(),
+
             ListTile(
-              trailing: Icon(Icons.feedback),
-              hoverColor: const Color.fromARGB(255, 157, 170, 82),
-              title: Text("FeedBack"),
+              leading: Icon(Icons.feedback, color: Colors.indigo),
+              title: Text("Feedback"),
+              hoverColor: Colors.indigo.shade100,
               onTap: () {},
             ),
+
             Spacer(),
-            Text("Copyright"),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text("© 2026 Prantha"),
+            ),
           ],
         ),
       ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: const Color.fromARGB(255, 157, 170, 82),
+        backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
         shape: CircleBorder(),
         tooltip: "Message",
@@ -65,36 +86,63 @@ class HomePage extends StatelessWidget {
       ),
 
       body: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(8.0),
             child: TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 227, 235, 235),
+                backgroundColor: Colors.cyan.shade50,
                 foregroundColor: Colors.cyan,
-                side: BorderSide(color: Colors.cyan, width: 3),
-                fixedSize: Size(100, 30),
-                elevation: 2,
+                side: BorderSide(
+                  color: Colors.cyan,
+                  width: 2,
+                ),
+                fixedSize: Size(100, 40),
+                elevation: 3,
                 shadowColor: Colors.cyan,
               ),
               child: Text("Cyan"),
             ),
           ),
+
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 227, 235, 235),
+              backgroundColor: Colors.green.shade50,
               foregroundColor: Colors.green,
-              side: BorderSide(color: Colors.greenAccent, width: 3),
-              fixedSize: Size(100, 30),
+              side: BorderSide(
+                color: Colors.green,
+                width: 2,
+              ),
+              fixedSize: Size(100, 40),
+              elevation: 3,
             ),
             child: Text("Green"),
           ),
-          OutlinedButton(onPressed: () {}, child: Text("Blue")),
-          IconButton(onPressed: () {}, icon: Icon(Icons.alarm)),
+
+          SizedBox(width: 5),
+
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.blue,
+              side: BorderSide(
+                color: Colors.blue,
+                width: 2,
+              ),
+            ),
+            child: Text("Blue"),
+          ),
+
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.alarm),
+            color: Colors.deepOrange,
+            tooltip: "Alarm",
+          ),
         ],
       ),
     );
