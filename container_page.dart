@@ -8,28 +8,28 @@ class ContainerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Container Page"),
-        backgroundColor: Colors.indigo,
+        title: const Text("Container Page"),
+        backgroundColor: Colors.teal,
         foregroundColor: Colors.white,
       ),
 
       body: Center(
         child: Container(
-          height: 250,
+          height: 300,
           width: 300,
-          margin: EdgeInsets.all(20),
-          padding: EdgeInsets.all(20),
+          margin: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           alignment: Alignment.center,
 
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
 
             border: Border.all(
-              width: 3,
-              color: Colors.white,
+              width: 4,
+              color: Colors.teal,
             ),
 
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
               colors: [
                 Colors.blue,
                 Colors.purple,
@@ -38,7 +38,7 @@ class ContainerPage extends StatelessWidget {
               end: Alignment.bottomRight,
             ),
 
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.grey,
                 blurRadius: 10,
@@ -48,7 +48,7 @@ class ContainerPage extends StatelessWidget {
             ],
           ),
 
-          child: Text(
+          child: const Text(
             "WELCOME\nTO FLUTTER",
             textAlign: TextAlign.center,
             style: TextStyle(

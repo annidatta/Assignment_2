@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,31 +8,32 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Prantha's Homepage"),
+        title: const Text("Prantha's Homepage"),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.settings),
+            icon: const Icon(Icons.settings),
           ),
         ],
       ),
 
+      // Navigation Drawer
       drawer: Drawer(
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.indigo,
               ),
-              accountName: Text("Prantha"),
-              accountEmail: Text("Welcome to my Homepage"),
-              currentAccountPicture: CircleAvatar(
+              accountName: const Text("Prantha"),
+              accountEmail: const Text("Welcome to my Homepage"),
+              currentAccountPicture: const CircleAvatar(
                 backgroundColor: Colors.white,
                 child: Icon(
                   Icons.person,
@@ -42,33 +44,42 @@ class HomePage extends StatelessWidget {
             ),
 
             ListTile(
-              leading: Icon(Icons.home, color: Colors.indigo),
-              title: Text("Homepage"),
+              leading: const Icon(
+                Icons.home,
+                color: Colors.indigo,
+              ),
+              title: const Text("Homepage"),
               hoverColor: Colors.indigo.shade100,
               onTap: () {},
             ),
 
-            Divider(),
+            const Divider(),
 
             ListTile(
-              leading: Icon(Icons.call, color: Colors.indigo),
-              title: Text("Contact"),
+              leading: const Icon(
+                Icons.call,
+                color: Colors.indigo,
+              ),
+              title: const Text("Contact Me"),
               hoverColor: Colors.indigo.shade100,
               onTap: () {},
             ),
 
-            Divider(),
+            const Divider(),
 
             ListTile(
-              leading: Icon(Icons.feedback, color: Colors.indigo),
-              title: Text("Feedback"),
+              leading: const Icon(
+                Icons.feedback,
+                color: Colors.indigo,
+              ),
+              title: const Text("Feedback"),
               hoverColor: Colors.indigo.shade100,
               onTap: () {},
             ),
 
-            Spacer(),
+            const Spacer(),
 
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(10),
               child: Text("© 2026 Prantha"),
             ),
@@ -76,15 +87,17 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
+      // Floating Action Button
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
-        shape: CircleBorder(),
+        shape: const CircleBorder(),
         tooltip: "Message",
-        child: Icon(Icons.message),
+        child: const Icon(Icons.message),
       ),
 
+      // Main Body
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,15 +109,15 @@ class HomePage extends StatelessWidget {
               style: TextButton.styleFrom(
                 backgroundColor: Colors.cyan.shade50,
                 foregroundColor: Colors.cyan,
-                side: BorderSide(
+                side: const BorderSide(
                   color: Colors.cyan,
                   width: 2,
                 ),
-                fixedSize: Size(100, 40),
+                fixedSize: const Size(100, 40),
                 elevation: 3,
                 shadowColor: Colors.cyan,
               ),
-              child: Text("Cyan"),
+              child: const Text("Cyan"),
             ),
           ),
 
@@ -113,33 +126,33 @@ class HomePage extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.green.shade50,
               foregroundColor: Colors.green,
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.green,
                 width: 2,
               ),
-              fixedSize: Size(100, 40),
+              fixedSize: const Size(100, 40),
               elevation: 3,
             ),
-            child: Text("Green"),
+            child: const Text("Green"),
           ),
 
-          SizedBox(width: 5),
+          const SizedBox(width: 5),
 
           OutlinedButton(
             onPressed: () {},
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.blue,
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.blue,
                 width: 2,
               ),
             ),
-            child: Text("Blue"),
+            child: const Text("Blue"),
           ),
 
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.alarm),
+            icon: const Icon(Icons.alarm),
             color: Colors.deepOrange,
             tooltip: "Alarm",
           ),
@@ -148,3 +161,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
